@@ -17,7 +17,7 @@
   <distributionManagement>
     <repository>
       <id>nexus-releases</id>
-      <name>sensemetrics Nexus Releases</name>
+      <name>Sensemetrics Nexus Releases</name>
       <url>file:///tmp/mavenrepo/</url>
     </repository>
   </distributionManagement>
