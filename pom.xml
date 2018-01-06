@@ -13,12 +13,13 @@
     <module>linus</module>
     <module>snoopy</module>
   </modules>
-  <repositories>
-    <repository>
-      <id>mynexus</id>
-      <url>file:///tmp/mavenrepo</url>
-    </repository>
-  </repositories>
+  <distributionManagement>
+  <repository>
+   <id>nexus-releases</id>
+   <name>sensemetrics Nexus Releases</name>
+   <url>file:///tmp/mavenrepo/</url>
+  </repository>
+  </distributionManagement>
   <build>
   <plugins>
   <plugin>
