@@ -19,8 +19,8 @@
   </modules>
   <distributionManagement>
     <repository>
-      <id>nexus-releases</id>
-      <name>Sensemetrics Nexus Releases</name>
+      <id>mynexus-releases</id>
+      <name>Duke Nexus Releases</name>
       <url>file:///tmp/mavenrepo/</url>
     </repository>
   </distributionManagement>
@@ -31,7 +31,9 @@
         <artifactId>multi-module-maven-release-plugin</artifactId>
         <version>2.2.0</version>
         <configuration>
-          <noChangesAction>ReleaseNone</noChangesAction>
+          <releaseGoals>
+            <releaseGoal>deploy</releaseGoal>
+          </releaseGoals>
         </configuration>
       </plugin>
       <plugin>
@@ -39,6 +41,7 @@
         <artifactId>flatten-maven-plugin</artifactId>
         <version>1.0.0</version>
         <configuration>
+          <flattenMode>minimum</flattenMode>
           <updatePomFile>true</updatePomFile>
         </configuration>
         <executions>
