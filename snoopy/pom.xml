@@ -9,7 +9,6 @@
   </parent>
   <groupId>com.sensemetrics</groupId>
   <artifactId>snoopy</artifactId>
-  <version>6.2-SNAPSHOT</version>
   <name>snoopy</name>
   <url>http://maven.apache.org</url>
   <properties>
