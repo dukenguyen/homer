@@ -27,6 +27,9 @@
         <groupId>com.github.danielflower.mavenplugins</groupId>
         <artifactId>multi-module-maven-release-plugin</artifactId>
         <version>2.2.0</version>
+        <configuration>
+          <noChangesAction>ReleaseNone</noChangesAction>
+        </configuration>
       </plugin>
     </plugins>
   </build>
