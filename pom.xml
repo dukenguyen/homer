@@ -4,9 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sensemetrics</groupId>
   <artifactId>homer</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>${revision}</version>
   <packaging>pom</packaging>
   <name>homer</name>
+  <properties>
+    <revision>1.0-SNAPSHOT</revision>
+  </properties>
   <modules>
     <module>core</module>
     <module>app</module>
@@ -30,6 +33,30 @@
         <configuration>
           <noChangesAction>ReleaseNone</noChangesAction>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+        </configuration>
+        <executions>
+          <execution>
+            <id>flatten</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>flatten</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>flatten.clean</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
