@@ -9,6 +9,7 @@
   </parent>
   <groupId>com.sensemetrics</groupId>
   <artifactId>lila</artifactId>
+  <packaging>war</packaging>
   <name>lila</name>
   <url>http://maven.apache.org</url>
   <properties>

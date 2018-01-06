@@ -9,6 +9,7 @@
   </parent>
   <groupId>com.sensemetrics</groupId>
   <artifactId>linus</artifactId>
+  <packaging>war</packaging>
   <name>linus</name>
   <url>http://maven.apache.org</url>
   <properties>
