@@ -1,0 +1,79 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] homer
+[INFO] core
+[INFO] app
+[INFO] lila
+[INFO] linus
+[INFO] snoopy
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building homer 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ homer ---
+[INFO] com.sensemetrics:homer:pom:1.0-SNAPSHOT
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building core 2.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ core ---
+[INFO] com.sensemetrics:core:jar:2.0-SNAPSHOT
+[INFO] \- junit:junit:jar:3.8.1:test
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building app 3.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ app ---
+[INFO] com.sensemetrics:app:jar:3.0-SNAPSHOT
+[INFO] +- com.sensemetrics:core:jar:2.0-SNAPSHOT:compile
+[INFO] \- junit:junit:jar:3.8.1:test
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building lila 4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ lila ---
+[INFO] com.sensemetrics:lila:jar:4.0-SNAPSHOT
+[INFO] +- com.sensemetrics:app:jar:3.0-SNAPSHOT:compile
+[INFO] |  \- com.sensemetrics:core:jar:2.0-SNAPSHOT:compile
+[INFO] \- junit:junit:jar:3.8.1:test
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building linus 5.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ linus ---
+[INFO] com.sensemetrics:linus:jar:5.0-SNAPSHOT
+[INFO] +- com.sensemetrics:app:jar:3.0-SNAPSHOT:compile
+[INFO] |  \- com.sensemetrics:core:jar:2.0-SNAPSHOT:compile
+[INFO] \- junit:junit:jar:3.8.1:test
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building snoopy 6.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ snoopy ---
+[INFO] com.sensemetrics:snoopy:jar:6.0-SNAPSHOT
+[INFO] +- com.sensemetrics:core:jar:2.0-SNAPSHOT:compile
+[INFO] \- junit:junit:jar:3.8.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] homer .............................................. SUCCESS [  0.530 s]
+[INFO] core ............................................... SUCCESS [  0.024 s]
+[INFO] app ................................................ SUCCESS [  0.012 s]
+[INFO] lila ............................................... SUCCESS [  0.007 s]
+[INFO] linus .............................................. SUCCESS [  0.007 s]
+[INFO] snoopy ............................................. SUCCESS [  0.005 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.810 s
+[INFO] Finished at: 2018-01-05T21:08:04-08:00
+[INFO] Final Memory: 14M/309M
+[INFO] ------------------------------------------------------------------------
