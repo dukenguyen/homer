@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
   <name>homer</name>
   <properties>
-    <revision>8.0-SNAPSHOT</revision>
+    <revision>9.0-SNAPSHOT</revision>
   </properties>
   <modules>
     <module>core</module>
