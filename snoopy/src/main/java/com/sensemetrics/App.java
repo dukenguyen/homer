@@ -1,5 +1,5 @@
 package com.sensemetrics;
-o
+
 //
 /**
  * Hello world!
