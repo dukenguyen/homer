@@ -9,7 +9,7 @@
   <name>homer</name>
   <!-- properties -->
   <properties>
-    <revision>9.1-SNAPSHOT</revision>
+    <revision>10.0-SNAPSHOT</revision>
   </properties>
   <modules>
     <module>core</module>
