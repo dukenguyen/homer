@@ -7,7 +7,7 @@
   <version>${revision}</version>
   <packaging>pom</packaging>
   <name>homer</name>
-  <!-- properties -->
+  <!--x properties -->
   <properties>
     <revision>10.0-SNAPSHOT</revision>
   </properties>
