@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build core') {
       steps {
-        sh 'mvn -DskipTests clean install -pl core'
+        build('core')
       }
     }
     stage('Build app') {
@@ -44,4 +44,8 @@ pipeline {
       }
     }
   }
+}
+
+def build(module) {
+  sh "mvn -DskipTests clean install -pl $module"
 }
