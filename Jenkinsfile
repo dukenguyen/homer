@@ -14,5 +14,10 @@ pipeline {
         sh 'mvn test'
       }
     }
+    stage('Publish') {
+      steps {
+        sh 'mvn releaser:release'
+      }
+    }
   }
 }
