@@ -6,29 +6,29 @@ pipeline {
   stages {
     stage('Build core') {
       steps {
-        sh 'mvn -DskipTests clean package -pl core'
+        sh 'mvn -DskipTests clean install -pl core'
       }
     }
     stage('Build app') {
       steps {
-        sh 'mvn -DskipTests clean package -pl app'
+        sh 'mvn -DskipTests clean install -pl app'
       }
     }
     stage('Build lila/linus/snoopy') {
       parallel {
         stage('Build lila') {
           steps {
-            sh 'mvn -DskipTests clean package -pl lila'
+            sh 'mvn -DskipTests clean install -pl lila'
           }
         }
         stage('Build linus') {
           steps {
-            sh 'mvn -DskipTests clean package -pl linus'
+            sh 'mvn -DskipTests clean install -pl linus'
           }
         }
         stage('Build snoopy') {
           steps {
-            sh 'mvn -DskipTests clean package -pl snoopy'
+            sh 'mvn -DskipTests clean install -pl snoopy'
           }
         }
       } 
