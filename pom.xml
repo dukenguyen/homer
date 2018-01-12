@@ -36,7 +36,7 @@
           <releaseGoals>
             <releaseGoal>deploy</releaseGoal>
           </releaseGoals>
-          <serverId>my-server</serveriId>
+          <serverId>my-server</serverId>
         </configuration>
       </plugin>
       <plugin>
