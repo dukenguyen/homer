@@ -4,6 +4,11 @@ pipeline {
     maven 'M3'
   }
   stages {
+    stage('Build homer') {
+      steps {
+        build('homer')
+      }
+    }
     stage('Build core') {
       steps {
         build('core')
@@ -11,24 +16,24 @@ pipeline {
     }
     stage('Build app') {
       steps {
-        sh 'mvn -DskipTests clean install -pl app'
+        build('app')
       }
     }
     stage('Build lila/linus/snoopy') {
       parallel {
         stage('Build lila') {
           steps {
-            sh 'mvn -DskipTests clean install -pl lila'
+            build('lila')
           }
         }
         stage('Build linus') {
           steps {
-            sh 'mvn -DskipTests clean install -pl linus'
+            build('linus')
           }
         }
         stage('Build snoopy') {
           steps {
-            sh 'mvn -DskipTests clean install -pl snoopy'
+            build('snoopy')
           }
         }
       } 
