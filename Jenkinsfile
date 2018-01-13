@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build homer') {
       steps {
-        build('homer')
+        build('.')
       }
     }
     stage('Build core') {
