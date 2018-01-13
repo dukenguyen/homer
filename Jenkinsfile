@@ -45,7 +45,7 @@ pipeline {
     }
     stage('Publish') {
       steps {
-        sh 'mvn releaser:release'
+        sh 'mvn releaser:release -DskipTests'
       }
     }
   }
