@@ -76,7 +76,7 @@
             </goals>
             <phase>install</phase>
             <configuration>
-              <message>Revision is ${revision}</message>
+              <message>Version is ${project.version}</message>
             </configuration>
           </execution>
         </executions>
