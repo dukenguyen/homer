@@ -14,7 +14,6 @@
   <modules>
     <module>core</module>
     <module>app</module>
-    <module>viz</module>
     <module>lila</module>
     <module>linus</module>
     <module>snoopy</module>
