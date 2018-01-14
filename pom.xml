@@ -63,6 +63,24 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>com.google.code.echo-maven-plugin</groupId>
+        <artifactId>echo-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <inherited>false</inherited>
+        <executions>
+          <execution>
+            <id>end</id>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <phase>install</phase>
+            <configuration>
+              <message>Revision is ${revision}</message>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
