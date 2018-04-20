@@ -11,7 +11,7 @@
   <artifactId>app</artifactId>
   <version>${revision}</version>
   <name>app</name>
-  <url>http://maven.apache.org</url>
+  <url>xhttp://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
