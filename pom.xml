@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sensemetrics</groupId>
   <artifactId>homer</artifactId>
   <version>${revision}</version>
   <packaging>pom</packaging>
   <name>homer</name>
-  <!-- xproperties -->
-  <properties>
-    <revision>10.0-SNAPSHOT</revision>
-  </properties>
   <modules>
     <module>core</module>
     <module>app</module>
@@ -25,6 +21,9 @@
       <url>file:///tmp/mavenrepo/</url>
     </repository>
   </distributionManagement>
+  <properties>
+    <revision>11.0-SNAPSHOT</revision>
+  </properties>
   <build>
     <plugins>
       <plugin>
@@ -42,10 +41,6 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>flatten-maven-plugin</artifactId>
         <version>1.0.0</version>
-        <configuration>
-          <flattenMode>bom</flattenMode>
-          <updatePomFile>true</updatePomFile>
-        </configuration>
         <executions>
           <execution>
             <id>flatten</id>
@@ -62,24 +57,28 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <flattenMode>bom</flattenMode>
+          <updatePomFile>true</updatePomFile>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>com.google.code.echo-maven-plugin</groupId>
         <artifactId>echo-maven-plugin</artifactId>
         <version>1.0.0</version>
-        <inherited>false</inherited>
         <executions>
           <execution>
             <id>end</id>
+            <phase>install</phase>
             <goals>
               <goal>echo</goal>
             </goals>
-            <phase>install</phase>
             <configuration>
               <message>Revision is ${revision}</message>
             </configuration>
           </execution>
         </executions>
+        <inherited>false</inherited>
       </plugin>
     </plugins>
   </build>

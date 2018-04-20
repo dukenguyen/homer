@@ -9,6 +9,7 @@
   </parent>
   <groupId>com.sensemetrics</groupId>
   <artifactId>app</artifactId>
+  <version>${revision}</version>
   <name>app</name>
   <url>http://maven.apache.org</url>
   <properties>
