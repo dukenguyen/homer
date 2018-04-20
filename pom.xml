@@ -22,7 +22,7 @@
     </repository>
   </distributionManagement>
   <properties>
-    <revision>11.0-SNAPSHOT</revision>
+    <revision>12.0-SNAPSHOT</revision>
   </properties>
   <build>
     <plugins>
